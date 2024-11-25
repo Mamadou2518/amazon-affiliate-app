@@ -1,0 +1,65 @@
+<header class="header">
+    <div class="menu_logo">
+      <div class="menu_principal">
+        <button (click)="toggleMenu()" class="icon-link">
+          <img src="assets/images/logo_menu_principal.png" alt="Menu" class="icon-img" />
+        </button>
+      </div>
+      <div class="logo">
+        <a routerLink="/">
+          <img src="assets/images/logo_mika.png" class="App-logo_mika" alt="logo" />
+        </a>
+      </div>
+    </div>
+  
+    <div class="search-bar">
+      <img src="assets/images/search_icon.png" alt="Search" class="search-icon" />
+      <input type="text" placeholder="Rechercher un produit" />
+      <button type="submit">
+        <img src="assets/images/filter_icon.png" alt="Filter" class="filter-icon" />
+      </button>
+    </div>
+  
+    <div class="header-icons">
+      <a routerLink="/favorites" class="icon-link">
+        <img src="assets/images/heart.png" alt="Favoris" class="icon-img" />
+        <span class="icon-badge">{{ favoritesCount }}</span>
+      </a>
+  
+      <a routerLink="/cart" class="icon-link">
+        <img src="assets/images/cart.png" alt="Panier" class="icon-img" />
+        <span class="icon-badge">{{ cartCount }}</span>
+      </a>
+  
+      <a routerLink="/notifications" class="icon-link">
+        <img src="assets/images/notification.png" alt="Notifications" class="icon-img" />
+        <span class="icon-badge">0</span>
+      </a>
+  
+      <!-- Icône utilisateur -->
+      <div class="profile-container" #profileRef>
+        <button (click)="toggleProfileMenu()" class="icon-link profile-icon">
+          <img src="assets/images/user.png" alt="Utilisateur" class="icon-img" />
+        </button>
+  
+        <!-- Onglet du profil -->
+        <div *ngIf="profileMenuOpen" class="profile-menu">
+          <button class="profile-button">Se connecter</button>
+          <button class="profile-button">S'inscrire</button>
+        </div>
+      </div>
+  
+      <select class="language-select">
+        <option value="fr">Fr</option>
+        <option value="en">En</option>
+        <option value="es">Es</option>
+        <option value="ar">Ar</option>
+      </select>
+    </div>
+  </header>
+
+<!-- Bouton pour ouvrir le menu -->
+<button (click)="toggleMenu()">Menu</button>
+  
+ <!-- Menu latéral -->
+<app-side-menu [menuOpen]="menuOpen" (menuClose)="toggleMenu()"></app-side-menu>

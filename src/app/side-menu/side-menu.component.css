@@ -1,0 +1,81 @@
+/* Overlay qui assombrit l'arrière-plan quand le menu est ouvert */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Arrière-plan semi-transparent */
+    z-index: 1000; /* En dessous du menu latéral */
+    cursor: pointer; /* Curseur pour indiquer qu'on peut cliquer dessus */
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Caché par défaut */
+    width: 250px;
+    height: 100%;
+    background-color: #ff8f40;
+    color: #070707;
+    transition: left 0.3s ease; /* Transition fluide lors de l'ouverture/fermeture */
+    z-index: 1000; /* Au-dessus de l'overlay */
+    padding-top: 60px;
+}
+
+.side-menu.open {
+    left: 0; /* Menu visible lorsqu'il est ouvert */
+    width: 340px;
+}
+
+/* Style pour le bouton de fermeture du menu */
+.close-menu-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Logo dans le menu */
+.menu-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.menu-logo-img {
+    width: 150px; /* Taille du logo */
+}
+
+/* Styles pour les icônes du menu */
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px; /* Coins arrondis pour chaque élément */
+    transition: background-color 0.3s ease, padding-left 0.3s ease; /* Transition pour le hover */
+}
+
+/* Ajoute un espace (marge) entre l'icône et le texte */
+.menu-icon {
+    margin-right: 15px; /* Espace entre l'icône et le texte */
+}
+
+/* Effet de survol */
+.side-menu ul li:hover {
+    background-color: #d35400; /* Couleur de fond au survol */
+    color: white;
+    padding-left: 30px; /* Décale le contenu vers la droite lors du survol */
+}

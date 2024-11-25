@@ -1,0 +1,22 @@
+<!-- Overlay qui apparaît lorsque le menu est ouvert -->
+<div class="menu-overlay" *ngIf="menuOpen" (click)="closeMenu()"></div>
+
+<div class="side-menu" [class.open]="menuOpen">
+  <!-- Bouton pour fermer le menu -->
+  <button class="close-menu-button" (click)="closeMenu()">
+    &times; <!-- Utilisation du caractère × pour le bouton de fermeture -->
+  </button>
+
+  <!-- Affichage du logo -->
+  <div class="menu-logo">
+    <img src="assets/images/logo_mika.png" alt="Logo Mika" class="menu-logo-img" />
+  </div>
+
+  <ul>
+    <li *ngFor="let item of menuItems" (click)="closeMenu()">
+      <a [routerLink]="item.route">
+        <img [src]="item.icon" [alt]="item.label" class="menu-icon" /> {{ item.label }}
+      </a>
+    </li>
+  </ul>
+</div>
