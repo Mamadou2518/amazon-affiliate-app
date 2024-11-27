@@ -1,11 +1,21 @@
 <!-- Existing content -->
-<app-headers></app-headers>
-<h1>Welcome to My Amazon Affiliate Store</h1>
-<app-product-list></app-product-list>
+<header>
+  <app-headers></app-headers>
+</header>
 
-<!-- Affiliate Disclosure -->
+
+ <body>
+  <app-category-display-grid
+  [category]="category"
+  (addToCart)="onAddToCart($event)"
+  (removeFromCart)="onRemoveFromCart($event)"
+  (toggleFavorite)="onToggleFavorite($event)"
+></app-category-display-grid>
+
+  <!-- <app-product-card></app-product-card> -->
+ </body>
+
+
 <footer>
-  <p>
-    En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.
-  </p>
+  <app-footer></app-footer>
 </footer>

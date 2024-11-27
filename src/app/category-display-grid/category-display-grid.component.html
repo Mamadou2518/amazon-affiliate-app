@@ -1,0 +1,20 @@
+<div class="category-grid-container">
+    <div class="category-header">
+      <h2>{{ category.categorie_name }}</h2>
+      <div class="filter-sort-buttons">
+        <button class="filter-button">Filtrer <span>&#9660;</span></button>
+        <button class="sort-button">Trier <span>&#9660;</span></button>
+      </div>
+    </div>
+  
+    <div class="product-grid" [style.gridTemplateColumns]="'repeat(' + columns + ', 1fr)'">
+      <app-product-card
+        *ngFor="let product of category.products"
+        [product]="product"
+        (addToCart)="onAddToCart(product.id)"
+        (removeFromCart)="onRemoveFromCart(product.id)"
+        (toggleFavorite)="onToggleFavorite(product.id)"
+      ></app-product-card>
+    </div>
+  </div>
+  

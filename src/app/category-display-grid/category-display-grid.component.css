@@ -1,0 +1,50 @@
+.category-grid-container {
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.category-header h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.filter-sort-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.filter-button, .sort-button {
+    background-color: #FF6F00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.filter-button span, .sort-button span {
+    margin-left: 5px;
+}
+
+.filter-button:hover, .sort-button:hover {
+    background-color: #FF8C00;
+}
+
+/* Mettre à jour la grille pour la rendre flexible */
+.product-grid {
+    display: grid;
+    grid-gap: 20px;
+    margin-top: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Grille flexible */
+    grid-auto-rows: auto;
+}

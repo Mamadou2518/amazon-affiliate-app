@@ -1,14 +1,8 @@
 <div class="product-list">
-    <div class="product" *ngFor="let product of products">
-      <h2>{{ product.name }}</h2>
-      <a [href]="product.affiliateLink" target="_blank" rel="noopener noreferrer">
-        <img [src]="product.imageUrl" [alt]="product.name" />
-      </a>
-      <p>
-        <a [href]="product.affiliateLink" target="_blank" rel="noopener noreferrer">
-          View on Amazon
-        </a>
-      </p>
-    </div>
+  <div class="product" *ngFor="let product of products">
+    <h2>{{ product.name }}</h2>
+    <a [href]="product.affiliateLink" target="_blank" rel="noopener noreferrer">
+      <img [src]="product.imageUrl" [alt]="product.name" />
+    </a>
   </div>
-  
+</div>
