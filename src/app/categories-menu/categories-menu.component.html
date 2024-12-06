@@ -1,0 +1,84 @@
+<!-- Overlay -->
+<div class="menu-overlay" *ngIf="isMenuVisible || isSubMenuVisible" (click)="closeBothMenus()"></div>
+
+<!-- Main Navigation -->
+<nav class="category-menu">
+  <img src="assets/images/logo_menu_categories.png" alt="Logo" class="logo" (click)="toggleMenu()" />
+  <ul>
+    <li><a routerLink="/nouveautes">Nouveautés</a></li>
+    <div class="separator">|</div>
+    <li><a routerLink="/promos">Promos</a></li>
+    <div class="separator">|</div>
+    <li><a routerLink="/homme">Homme</a></li>
+    <div class="separator">|</div>
+    <li><a routerLink="/femme">Femme</a></li>
+    <div class="separator">|</div>
+    <li><a routerLink="/enfant">Enfant</a></li>
+    <div class="separator">|</div>
+    <li><a routerLink="/vetements">Vêtements</a></li>
+    <div class="separator">|</div>
+    <li><a routerLink="/chaussures">Chaussures</a></li>
+    <div class="separator">|</div>
+    <li><a routerLink="/bien-etre">Bien-être</a></li>
+    <div class="separator">|</div>
+    <li><a routerLink="/accessoires">Accessoires</a></li>
+    <div class="separator">|</div>
+    <li><a routerLink="/informatique">Informatique</a></li>
+  </ul>
+</nav>
+
+<!-- Sidebar Menu -->
+<div class="categories-sidebar" [class.open]="isMenuVisible">
+  <button class="close-menu-button" (click)="toggleMenu()">
+    <fa-icon [icon]="'times'"></fa-icon>
+  </button>
+  <div class="menu-logo">
+    <img src="assets/images/logo_mika.png" alt="Logo Mika" class="menu-logo-img" />
+  </div>
+  <h3>Catégories</h3>
+  <div class="site-title">
+    <img src="assets/images/amazon_logo.png" alt="Amazon Logo" class="category-logo" />
+    Amazon
+  </div>
+  <ul class="categories">
+    <li *ngFor="let category of categories.Amazon" (click)="toggleSubMenu(category)">
+      {{ category.name }}
+      <img src="assets/images/fleche_droite.png" alt="Flèche Droite" class="sub-category-fleche" />
+    </li>
+  </ul>
+
+  <div class="site-title">
+    <img src="assets/images/shein_logo.png" alt="Shein Logo" class="category-logo" />
+    Shein
+  </div>
+  <ul class="categories">
+    <li *ngFor="let category of categories.Shein" (click)="toggleSubMenu(category)">
+      {{ category.name }}
+      <img src="assets/images/fleche_droite.png" alt="Flèche Droite" class="sub-category-fleche" />
+    </li>
+  </ul>
+
+  <div class="site-title">
+    <img src="assets/images/zara_logo.png" alt="Zara Logo" class="category-logo" />
+    Zara
+  </div>
+  <ul class="categories">
+    <li *ngFor="let category of categories.Zara" (click)="toggleSubMenu(category)">
+      {{ category.name }}
+      <img src="assets/images/fleche_droite.png" alt="Flèche Droite" class="sub-category-fleche" />
+    </li>
+  </ul>
+</div>
+
+<!-- Sub-menu -->
+<div class="sub-menu" [class.open]="isSubMenuVisible">
+  <button class="close-menu-button" (click)="isSubMenuVisible = false">
+    <fa-icon [icon]="'times'"></fa-icon>
+  </button>
+  <h3>{{ selectedCategory }}</h3>
+  <ul>
+    <li *ngFor="let subCategory of selectedSubCategories">
+      {{ subCategory }}
+    </li>
+  </ul>
+</div>

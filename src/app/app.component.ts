@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { HeadersComponent } from './headers/headers.component'; 
 import { CategoryDisplayGridComponent } from './category-display-grid/category-display-grid.component';
 import { FooterComponent } from "./app-footer/app-footer.component";
-// import { ProductCardComponent } from "./product-card/product-card.component"; 
+import { CategoriesContainerComponent } from "./categories-container/categories-container.component"; 
+import {CategoriesMenuComponent} from "./categories-menu/categories-menu.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeadersComponent, CategoryDisplayGridComponent, FooterComponent],
+  imports: [HeadersComponent, CategoryDisplayGridComponent, FooterComponent, CategoriesMenuComponent, CategoriesContainerComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'] 
 })

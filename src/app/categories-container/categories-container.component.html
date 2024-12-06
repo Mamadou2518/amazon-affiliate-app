@@ -1,0 +1,10 @@
+<div class="categories-container">
+  <img src="assets/images/logo_menu_categories.png" alt="Logo" class="logo" (click)="toggleMenu()" />
+
+  <div class="menu-content" *ngIf="isMenuVisible && categories">
+    <app-categories-menu
+      [categories]="categories"
+      (menuClose)="isMenuVisible = false"
+    ></app-categories-menu>
+  </div>
+</div>

@@ -8,26 +8,26 @@
     </div>
     <div class="product-actions">
       <!-- Wishlist Button -->
-      <button class="wishlist-button" (click)="toggleHeart()">
+      <!-- <button class="wishlist-button" (click)="toggleHeart()">
         <img 
           [src]="isHeartFilled ? 'assets/images/heart_icon_filled.png' : 'assets/images/heart_icon_empty.png'" 
           class="heart-icon" 
           alt="heart-icon" 
         />
-      </button>
+      </button> -->
   
       <!-- Cart Section -->
       <div class="cart-section">
         <ng-container *ngIf="quantity === 0; else quantityControl">
-          <button class="cart-button" (click)="increaseQuantity()">
+          <!-- <button class="cart-button" (click)="increaseQuantity()">
             <img src="assets/images/cart_icon.png" class="cart-icon" alt="cart-icon" />
-          </button>
+          </button> -->
         </ng-container>
         <ng-template #quantityControl>
           <div class="quantity-control">
-            <button class="quantity-button" (click)="decreaseQuantity()">−</button>
+            <!-- <button class="quantity-button" (click)="decreaseQuantity()">−</button>
             <span class="quantity">{{ quantity }}</span>
-            <button class="quantity-button" (click)="increaseQuantity()">+</button>
+            <button class="quantity-button" (click)="increaseQuantity()">+</button> -->
           </div>
         </ng-template>
       </div>

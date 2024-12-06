@@ -1,0 +1,239 @@
+/* Conteneur du menu de catégories */
+/* .categories-menu-container {
+    position: relative;
+  }
+   */
+  /* Barre de navigation principale */
+  .category-menu {
+    background-color: #FFA26B;
+    padding: 10px 0;
+    border-top: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    position: fixed;
+    z-index: 900;
+    width: 100%;
+  }
+  
+  /* Liste des liens dans le menu */
+  .category-menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 25px; /* Coins arrondis pour chaque élément */
+    transition: background-color 0.3s ease, padding-left 0.3s ease; /* Transition pour le hover */
+  }
+  
+  .category-menu ul li {
+    margin: 0 15px;
+    
+  }
+  
+  .category-menu ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  .category-menu ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .separator {
+    font-weight: bold;
+    color: white;
+  }
+  
+ /* Logo dans la barre de menu */
+.logo {
+    cursor: pointer;
+    margin-right: 20px;
+    width: 27px; /* Ajustez la taille du logo ici */
+    height: auto; /* Conservez les proportions du logo */
+  }
+  
+  /* Overlay qui assombrit l'arrière-plan quand le menu est ouvert */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Arrière-plan semi-transparent */
+    z-index: 1000; /* En dessous du menu latéral */
+    cursor: pointer; /* Curseur pour indiquer qu'on peut cliquer dessus */
+  }
+  
+  /* Styles pour le menu latéral */
+  .categories-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Caché complètement par défaut */
+    width: 20%; /* 20% de la largeur de l'écran */
+    height: 100%; /* 100% de la hauteur de l'écran */
+    background-color: #ff8f40;
+    z-index: 1100; /* Au-dessus de l'overlay */
+    transition: left 0.3s ease; /* Transition fluide pour l'ouverture/fermeture */
+    padding: 20px;
+    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); Ombre pour un effet de profondeur */
+    overflow-y: auto; /* Rend le menu défilable */
+  }
+  
+  /* Lorsque le menu est ouvert */
+  .categories-sidebar.open {
+    left: 0; /* Le menu est visible */
+    overflow-y: auto; /* Rend le menu défilable */
+  }
+ 
+  
+  /* Style pour les titres de catégorie */
+  .site-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  /* Sous-catégories */
+  .categories {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 20px;
+  }
+  
+  /* .sub-categories li {
+    margin-bottom: 10px;
+    cursor: pointer;
+  } */
+
+/* Ajustement pour les logos des catégories */
+.site-title {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .category-logo {
+    width: 20px;  /* Taille des logos des catégories */
+    height: auto; /* Conserve les proportions des logos */
+    margin-right: 10px; /* Espace entre le logo et le texte */
+  }
+  
+  /* Style pour les flèches devant chaque sous-catégorie */
+  .sub-category-fleche {
+    width: 10px;  /* Taille des flèches devant les sous-catégories */
+    height: auto;
+    margin-right: 10px; /* Espace entre la flèche et le texte */
+    vertical-align: middle; /* Assure que la flèche est alignée avec le texte */
+  }
+  
+/* Sous-catégories avec flèche à droite */
+.categories li {
+    display: flex;
+    justify-content: space-between; /* Aligne le texte à gauche et la flèche à droite */
+    align-items: center;
+    /* margin-bottom: 10px; */
+    cursor: pointer;
+  }
+  
+  .sub-category-fleche {
+    width: 40px;  /* Taille des flèches */
+    height: 40px;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+.categories-sidebar img{
+    width: auto;
+    height: auto;
+
+}
+
+.categories-sidebar ul li:hover {
+    background-color: #d35400; /* Couleur de fond au survol */
+    color: white;
+    padding-left: 30px; /* Décale le contenu vers la droite lors du survol */
+}
+
+/* Logo dans le menu */
+.menu-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.menu-logo-img {
+    width: 150px; /* Taille du logo */
+}
+
+/* Pour les navigateurs basés sur WebKit (Chrome, Safari, Edge) */
+.categories-sidebar {
+    scrollbar-width: none; /* Masquer pour Firefox */
+    -ms-overflow-style: none; /* Masquer pour Internet Explorer et Edge */
+  }
+  
+  .categories-sidebar::-webkit-scrollbar {
+    display: none; /* Masquer pour Chrome, Safari et Opera */
+  }
+
+/* Flèche vers le bas en bas du menu */
+.scroll-to-bottom {
+    text-align: center;
+    padding: 10px;
+  }
+
+
+  .scroll-fleche {
+    width: 40px; /* Taille de la flèche */
+    cursor: pointer; /* Affiche un curseur lorsque l'utilisateur survole la flèche */
+  }
+  
+  .scroll-fleche:hover {
+    opacity: 0.8; /* Légère transparence au survol */
+  }
+  
+  /* Styles pour le sous-menu */
+.sub-menu {
+  position: fixed;
+  top: 0;
+  left: 20%; /* Juste à droite du menu principal qui occupe 20% */
+  width: 15%; /* Largeur du sous-menu */
+  height: 100%;
+  background-color: #E39157;
+  z-index: 1000;
+  padding: 50px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+}
+
+.sub-menu h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.sub-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sub-menu ul li {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.sub-menu ul li:hover {
+  color: #fff;
+  background-color: #d35400;
+  padding-left: 10px;
+  transition: all 0.5s ease;
+}
+

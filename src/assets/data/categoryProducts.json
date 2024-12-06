@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "categorie_name": "Amazon",
+      "subCategories": [
+        "Catégorie 1",
+        "Catégorie 2",
+        "Catégorie 3",
+        "Catégorie 4",
+        "Catégorie 5"
+      ]
+    },
+    {
+      "categorie_name": "Shein",
+      "subCategories": [
+        "Catégorie 1",
+        "Catégorie 2",
+        "Catégorie 3",
+        "Catégorie 4",
+        "Catégorie 5"
+      ]
+    },
+    {
+      "categorie_name": "Zara",
+      "subCategories": [
+        "Catégorie 1",
+        "Catégorie 2",
+        "Catégorie 3",
+        "Catégorie 4",
+        "Catégorie 5"
+      ]
+    }
+  ]
+}

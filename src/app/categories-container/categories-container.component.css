@@ -1,0 +1,41 @@
+
+.categories-container {
+    position: relative; /* Pour que le menu soit positionné relativement au conteneur */
+    }
+    .logo {
+      cursor: pointer; /* Indique que l'image est cliquable */
+      width: 30px; /* Ajustez la taille du logo selon vos besoins */
+      height: auto; /* Conserve les proportions de l'image */
+      display: flex; /* Assure que l'image est un bloc pour éviter les espaces indésirables */
+      margin: 400 auto; /* Centre le logo horizontalement */
+      background: none;
+      right: 100%;
+      }
+  /* Styles pour le contenu du menu */
+  .menu-content {
+    position: absolute;
+    top: 200%; /* Place le menu juste en dessous du logo */
+    background-color: #ff6600; /* Couleur de fond du menu */
+    z-index: 1000; /* Assure que le menu est au-dessus des autres éléments */
+    flex-direction: column; /* Aligne les catégories verticalement */
+   bottom: top;
+   display: flexbox ;
+  }
+  
+  /* Styles pour chaque catégorie */
+  .category {
+    margin-bottom: 50px; /* Espacement entre les catégories */
+  }
+  .category ul li {
+    padding: 5px 100; /* Espacement autour des éléments de liste */
+    cursor: pointer; /* Indique que les éléments sont cliquables */
+   
+  }
+  .category-title {
+    font-size: 16px; /* Taille du texte pour les titres de catégorie */
+    font-weight: bold; /* Gras pour mettre en valeur le titre */
+    margin-bottom: 10px; /* Ajoute de l'espace sous le titre */
+  }
+  /*--------------------------------------------------------*/
+    
+  
